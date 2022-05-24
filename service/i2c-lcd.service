@@ -1,0 +1,11 @@
+[Unit]
+Description=Simple i2c lcd clock
+
+[Service]
+Type=simple
+Restart=always
+User=pi
+ExecStart=/home/pi/project/clock/.env/bin/python /home/pi/project/clock/i2c-clock.py
+
+[Install]
+WantedBy=multi-user.target
